@@ -49,6 +49,9 @@ It only solves **dependency correctness**.
 
 Skipping step 2 is a bug as if you don't detect cycles before sorting it can cause problems
 
+# Documentation 
+[pkg.go.dev/github.com/Aperture-OS/togosort-dfs](https://pkg.go.dev/github.com/Aperture-OS/togosort-dfs)
+
 ## License
 
 This project is licensed under the **MIT License**. See [LICENSE](LICENSE) for details.
