@@ -159,7 +159,8 @@ From less to most dependencies, 0,1,2,3: D,C,B,A
 // after you made your graph variable
 // sorted := graph.TopoSort()
 // sorted now contains the sorted array of packages/nodes
-// it is a array, shows itself like this [d c b a], 'd c b a' will be different depending on your situation
+// it is a array, shows itself like this [d c b a].
+// 'd c b a' will be different depending on your situation
 func (g *Graph) TopoSort() []string {
 	// Count how many dependencies each node has
 	inDegree := make(map[string]int)

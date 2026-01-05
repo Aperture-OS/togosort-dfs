@@ -9,13 +9,10 @@ package togosort
 
 import ()
 
-// Graph uses the convention:
-//
-//	dependency -> dependent
-//
-// If B depends on A:
-//
-//	A -> B
+// Graph uses the convention: dependent -> dependency
+// If B depends on A: A -> B
+// CONVENTION: 
+// In A -> B, A needs B to function, so A is the dependent, B is the dependency.
 type Graph struct {
 	Edges map[string][]string
 }
@@ -45,11 +42,9 @@ func (g *Graph) AddNode(node string) {
 }
 
 // AddEdge adds a dependency edge:
-//
-//	dependency -> dependent
-//
+// Dependent -> dependency
 // HOW TO USE:
-// graph.AddEdge("dependency", "dependent")
+// graph.AddEdge("dependent", "dependency")
 // to clear some doubts, if a depends on multiple dependencies such as a -> b,c,d
 // you're gonna have to call this multiple times, like this.
 // graph.AddEdge("a", "b")

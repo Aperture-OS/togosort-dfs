@@ -173,16 +173,12 @@ This order guarantees dependencies are handled before dependents.
 */
 
 // DFS performs a depth-first search starting from the given roots.
-// Returns:
-//
-//		error if there's a cycle.
-//	 	if no error it returns nil
-//
+// Returns: error if theres a cycle, nil if there's no cycle.
 // HOW TO USE:
 // Initialize a roots variable
 // roots: the packages you want to check/install; DFS will traverse all dependencies
 // reachable from these roots and return an error if any cycle is found. For a package manager it'd
-// *** Probably *** be the arguments the user input, eg.
+// *** Probably *** be the arguments of the user input, eg.
 // $ sudo blink install gtk4, gtk5, bash, zsh, fish
 // roots would be the packages, so gtk4, gtk5, bash, zsh, fish
 // roots := []string{ ***packages here*** }
